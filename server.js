@@ -1,7 +1,7 @@
 const net = require('net')
 const GT06Decoder = require('./gt06_decoder')
 
-const HOST = '0.0.0.0'
+const HOST = '84.247.131.246'
 const PORT = 5000
 
 const server = net.createServer(
