@@ -31,7 +31,7 @@ class GT06Decoder {
     processBuffer() {
         const packets = []
 
-        console.log(Buffer);
+        console.log(this.buffer);
         
     }
 }
