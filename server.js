@@ -23,6 +23,12 @@ const server = net.createServer(
                     const packet = packets[i];
 
                     console.log(packet);
+
+                    if (packet.needsResponse) {
+                        const response = gt06Decoder.generateResponse(packet.serialNumber, packet.protocol);
+                        socket.write(response);
+                        console.log(`📤 Response sent to ${clientId}: ${response.toString('hex').toUpperCase()}`);
+                    }
                 }
 
             }
