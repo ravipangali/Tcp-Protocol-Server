@@ -17,6 +17,7 @@ class GT06Decoder {
             0x15: 'STRING_INFO',
             0x16: 'ALARM_DATA',
             0x1A: 'GPS_LBS_DATA',
+            0xA0: 'GPS_LBS_STATUS_A0',
         }
 
         // Response commands that require acknowledgment
@@ -124,6 +125,9 @@ class GT06Decoder {
                 this.decodeLogin(dataPayload, result)
                 break
             case 0x12:
+                this.decodeGPSLBS(dataPayload, result)
+                break
+            case 0xA0:
                 this.decodeGPSLBS(dataPayload, result)
                 break
             case 0x13:
