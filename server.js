@@ -13,8 +13,19 @@ const server = net.createServer(
 
 
         socket.on('data', (data) => {
+
             console.log(`📨 Received data from ${clientId}: ${data.toString('hex').toUpperCase()}`);
             const packets = gt06Decoder.addData(data)
+
+            if (packets.length > 0) {
+
+                for (let i = 0; i < packets.length; i++) {
+                    const packet = packets[i];
+
+                    console.log(packet);
+                }
+
+            }
         })
 
 
