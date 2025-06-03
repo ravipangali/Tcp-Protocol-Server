@@ -336,7 +336,7 @@ class GT06Decoder {
         }
 
         if (data.length >= 3) {
-            result.voltage = data.readUInt16BE(1) / 100; // Convert to volts
+            result.voltage = data[1]; // Convert to volts
         }
 
         if (data.length >= 4) {
@@ -344,7 +344,7 @@ class GT06Decoder {
         }
 
         if (data.length >= 6) {
-            result.alarmLanguage = data.readUInt16BE(4);
+            result.alarmLanguage = data[4];
         }
     }
 
