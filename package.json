@@ -1,0 +1,24 @@
+{
+  "name": "own_tcp_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravipangali/Tcp-Protocol-Server.git"
+  },
+  "keywords": [],
+  "author": "Ravi Pangali",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ravipangali/Tcp-Protocol-Server/issues"
+  },
+  "homepage": "https://github.com/ravipangali/Tcp-Protocol-Server#readme",
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
+}
