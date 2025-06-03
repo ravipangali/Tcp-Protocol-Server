@@ -23,16 +23,21 @@ class GT06Decoder {
 
 
     addData(data) {
+        this.clearBuffer()
         this.buffer = Buffer.concat([this.buffer, data])
         return this.processBuffer()
     }
 
-    
+    clearBuffer() {
+        this.buffer = Buffer.alloc(0)
+    }
+
+
     processBuffer() {
         const packets = []
 
-        console.log(this.buffer);
-        
+        console.log(this.buffer)
+
     }
 }
 
