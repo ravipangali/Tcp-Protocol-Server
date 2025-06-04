@@ -324,9 +324,8 @@ class GT06Decoder {
 
 
     decodeStatusInfo(data, result) {
-
-        console.log('result: ',result);
-        console.log('data: ',data);
+        
+        console.log(data[1]);
         
 
         // if (data.length >= 1) {
