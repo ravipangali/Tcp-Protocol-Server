@@ -119,6 +119,8 @@ class GT06Decoder {
         }
 
         let dataPayload = packet.slice(dataStartOffset, serialOffset)
+        console.log('Data Payload :',dataPayload);
+        
 
         switch (packet[protocolOffset]) {
             case 0x01:
