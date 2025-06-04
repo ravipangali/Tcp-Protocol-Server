@@ -324,30 +324,35 @@ class GT06Decoder {
 
 
     decodeStatusInfo(data, result) {
-        if (data.length >= 1) {
-            const status = data[0];
-            result.terminalInfo = {
-                oilElectricity: (status & 0x01) !== 0,
-                gpsTracking: (status & 0x02) !== 0,
-                charging: (status & 0x04) !== 0,
-                accHigh: (status & 0x08) !== 0,
-                defence: (status & 0x10) !== 0,
-                lowBattery: (status & 0x20) !== 0,
-                gsmSignal: (status >> 6) & 0x03
-            };
-        }
 
-        if (data.length >= 3) {
-            result.voltage = data[1]; // Convert to volts
-        }
+        console.log('result: ',result);
+        console.log('data: ',data);
+        
 
-        if (data.length >= 4) {
-            result.gsmSignalStrength = data[3];
-        }
+        // if (data.length >= 1) {
+        //     const status = data[0];
+        //     result.terminalInfo = {
+        //         oilElectricity: (status & 0x01) !== 0,
+        //         gpsTracking: (status & 0x02) !== 0,
+        //         charging: (status & 0x04) !== 0,
+        //         accHigh: (status & 0x08) !== 0,
+        //         defence: (status & 0x10) !== 0,
+        //         lowBattery: (status & 0x20) !== 0,
+        //         gsmSignal: (status >> 6) & 0x03
+        //     };
+        // }
 
-        if (data.length >= 6) {
-            result.alarmLanguage = data[4];
-        }
+        // if (data.length >= 3) {
+        //     result.voltage = data[1]; // Convert to volts
+        // }
+
+        // if (data.length >= 4) {
+        //     result.gsmSignalStrength = data[3];
+        // }
+
+        // if (data.length >= 6) {
+        //     result.alarmLanguage = data[4];
+        // }
     }
 
 
