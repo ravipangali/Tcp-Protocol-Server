@@ -113,8 +113,8 @@ class GT06Decoder {
             length: packet[2],
             protocol: packet[protocolOffset],
             protocolName: this.PROTOCOL_NUMBERS[packet[protocolOffset]] || 'UNKNOWN',
-            serialNumber: serialOffset >= 0 ? packet.readUInt16BE(serialOffset) : 0,
-            checksum: checksumOffset >= 0 ? packet.readUInt16BE(checksumOffset) : 0,
+            serialNumber: serialOffset >= 0 ? packet[serialOffset] : 0,
+            checksum: checksumOffset >= 0 ? packet[checksumOffset] : 0,
             needsResponse: this.RESPONSE_REQUIRED.includes(packet[protocolOffset]),
         }
 
